@@ -1,0 +1,22 @@
+
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+</mat-toolbar>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="side">
+    <div class="navigation">
+      <ng-container *ngFor="let link of navigation" (click)="showFiller = !showFiller">
+        <a [routerLink]="link.url">{{link.name}}</a>
+      </ng-container>
+    </div>
+
+  </mat-drawer>
+
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+
+</mat-drawer-container>

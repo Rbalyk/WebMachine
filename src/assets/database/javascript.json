@@ -1,0 +1,20 @@
+{
+  "response": [
+    {
+      "id": 1,
+      "name": "Mutable vs Immutable Objects",
+      "url": "./mutable-immutable-data",
+      "logo": "",
+      "html": "",
+      "imageSrc": "./assets/images/nature1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mutable vs Immutable Objects",
+      "url": "./mutable-immutable-data",
+      "logo": "",
+      "html": "",
+      "imageSrc": "./assets/images/nature1.jpg"
+    }
+  ]
+}
