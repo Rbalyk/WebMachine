@@ -1,6 +1,17 @@
 <section class="container">
-  <div class="article" [routerLink]="article.url" *ngFor="let article of articles">
-    <img [src]="article.imageSrc" [alt]="article.name">
-    <h3>{{article.name}}</h3>
+  <h1>{{articles[0].topicName}}</h1>
+  <div class="article" [routerLink]="article.id" [queryParams]="{topic: article.type}" *ngFor="let article of articles">
+    <span class="topicLabel"
+          [style.color]="article.topicColor"
+          [style.background-color]="article.topicBackground">
+      {{article.topicName | uppercase}}
+    </span>
+    <img [src]="article.imageSrc" [alt]="article.title">
+    <div class="article-description">
+
+      <h2>{{article.title}}</h2>
+      <p>{{article.description}}</p>
+      <span>Публіковано: {{article.created}}</span>
+    </div>
   </div>
 </section>

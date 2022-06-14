@@ -12,7 +12,7 @@ export class SearchFilterPipe implements PipeTransform {
 
     args = args.toLowerCase();
 
-    const finalValue = value.filter((data) => {
+    const finalValue = value.filter((data: any) => {
       return JSON.stringify(data).toLowerCase().includes(args);
     });
     if (!!finalValue.length) {

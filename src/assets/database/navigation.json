@@ -1,14 +1,6 @@
-{
-  "response": [
-    {
-      "name": "JavaScript",
-      "url": "./javascript",
-      "logo": ""
-    },
-    {
-      "name": "Angular",
-      "url": "./angular",
-      "logo": ""
-    }
-  ]
-}
+[
+  {
+    "name": "JavaScript",
+    "url": "javascript"
+  }
+]

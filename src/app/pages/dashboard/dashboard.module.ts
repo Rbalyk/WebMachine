@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
-import { MutableImmutableDataComponent } from "./mutable-immutable-data.component";
+import { DashboardComponent } from "./dashboard.component";
+import { RouterModule } from "@angular/router";
+import { SharedModule } from "../../modules/shared.module";
 
 @NgModule({
   declarations:[
-    MutableImmutableDataComponent,
+    DashboardComponent,
   ],
   exports: [
-    MutableImmutableDataComponent,
+    DashboardComponent,
   ],
+  imports: [
+    RouterModule.forChild([{path: '', component: DashboardComponent}]),
+    SharedModule,
+  ]
 })
-export class MutableImmutableDataModule {
+export class DashboardModule {
 }

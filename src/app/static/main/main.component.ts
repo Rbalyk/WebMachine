@@ -1,21 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import {NavigationInterface} from "../../interfaces/navigation.interface";
-import Navigation from "../../classes/navigation";
+import { Navigation } from "../../interfaces/navigation.interface";
+import { MainService } from "../../services/main.service";
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class MainComponent implements OnInit {
 
-  showFiller = false;
-  navigation: NavigationInterface[] = [];
+  isNavigation = true;
+  navigation: Navigation[] = [];
 
-  constructor() { }
+  constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
-    this.navigation = Navigation.navigation;
+    this.initNavigation();
   }
+
+  private initNavigation(): void {
+    this.mainService.getTopics().subscribe( (response) => {
+      this.navigation = response;
+    })
+  }
+
+
 
 }

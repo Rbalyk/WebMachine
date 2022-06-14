@@ -1,15 +1,15 @@
 import {Component, OnInit} from "@angular/core";
 
 @Component({
-  selector: 'app-mutable-immutable-data',
-  templateUrl: './mutable-immutable-data.html',
-  styleUrls: ['./mutable-immutable-data.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
 
-export class MutableImmutableDataComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   ngOnInit() {
-    console.log('MutableImmutableDataComponent')
+    console.log('DashboardComponent')
   }
 
 }

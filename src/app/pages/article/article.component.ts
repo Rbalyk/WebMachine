@@ -1,19 +1,33 @@
 import {Component, OnInit} from "@angular/core";
-import {ArticleInterface} from "../../interfaces/article.interface";
+import {Article} from "../../interfaces/article.interface";
+import {ActivatedRoute} from "@angular/router";
+import {MainService} from "../../services/main.service";
 
 @Component({
-  selector: 'app-articles',
-  templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.scss']
+  selector: 'app-article',
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.scss']
 })
 
-export class ArticlesComponent implements OnInit {
+export class ArticleComponent implements OnInit {
 
-  articles: ArticleInterface[] = [];
+  article: Article | undefined;
+
+  constructor(private activeRoute: ActivatedRoute,
+              private mainService: MainService) {
+  }
 
   ngOnInit() {
-    // this.articles = JavascriptArticles.articles;
-    // console.log('DashboardComponent')
+    this.initArticle()
+  }
+
+  private initArticle(): void {
+    const articleId = this.activeRoute.snapshot.params['id'];
+    const articleType = this.activeRoute.snapshot.queryParams['topic'];
+    this.mainService.getArticleById(articleType, articleId).subscribe( (article) => {
+      this.article = article;
+    })
+    console.log()
   }
 
 }

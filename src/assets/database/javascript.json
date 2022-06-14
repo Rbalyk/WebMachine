@@ -1,20 +1,13 @@
-{
-  "response": [
-    {
-      "id": 1,
-      "name": "Mutable vs Immutable Objects",
-      "url": "./mutable-immutable-data",
-      "logo": "",
-      "html": "",
-      "imageSrc": "./assets/images/nature1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Mutable vs Immutable Objects",
-      "url": "./mutable-immutable-data",
-      "logo": "",
-      "html": "",
-      "imageSrc": "./assets/images/nature1.jpg"
-    }
-  ]
-}
+[
+  {
+    "id": "mutable_vs_immutable_objects",
+    "title": "Mutable vs Immutable Objects",
+    "imageSrc": "./assets/images/nature1.jpg",
+    "type": "javascript",
+    "topicName": "JavaScript",
+    "topicColor": "#222222",
+    "topicBackground": "#f7df1e",
+    "created": "10/05/22",
+    "description": "Яка різниця і для чого Mutable та Immutable дані"
+  }
+]

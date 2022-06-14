@@ -1,6 +1,9 @@
-<section class="container">
-  <div class="article" [routerLink]="article.url" *ngFor="let article of articles">
-    <img [src]="article.imageSrc" [alt]="article.name">
-    <h3>{{article.name}}</h3>
-  </div>
+<section class="item-article" *ngIf="article">
+  <header>
+    <h1 [style.color]="article.titleColor">{{article.title}}</h1>
+    <img [src]="article.imageSrc" [alt]="article.title">
+  </header>
+  <article *ngIf="article" [innerHTML]="article.html | safeHTML">
+
+  </article>
 </section>

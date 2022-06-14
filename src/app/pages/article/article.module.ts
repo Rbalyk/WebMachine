@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
-import { ArticlesComponent } from "./articles.component";
+import { ArticleComponent} from "./article.component";
 import { RouterModule } from "@angular/router";
 import { SharedModule } from "../../modules/shared.module";
 
 @NgModule({
   declarations: [
-    ArticlesComponent,
+    ArticleComponent,
   ],
   exports: [
-    ArticlesComponent,
+    ArticleComponent,
   ],
   imports: [
-    RouterModule.forChild([{path: '', component: ArticlesComponent}]),
+    RouterModule.forChild([{path: '', component: ArticleComponent}]),
     SharedModule,
   ]
 })
-export class ArticlesModule {
+export class ArticleModule {
 }
